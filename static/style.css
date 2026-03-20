@@ -38,6 +38,7 @@ body {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -160,6 +161,8 @@ img { display: block; max-width: 100%; }
   line-height: 1;
   pointer-events: none;
   user-select: none;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .hero-top-bar {
@@ -429,49 +432,6 @@ img { display: block; max-width: 100%; }
   color: rgba(255,255,255,0.45);
   line-height: 1.75;
 }
-
-/* ============================================
-   PHOTOGRAPHY BANNER
-   ============================================ */
-.photo-banner {
-  padding: 36px 48px;
-  background: var(--lime);
-  border-bottom: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-}
-.photo-banner-text h3 {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--bg-dark);
-  text-transform: uppercase;
-}
-.photo-banner-text p {
-  font-size: 13px;
-  font-weight: 300;
-  color: rgba(14,21,13,0.6);
-  margin-top: 4px;
-}
-.photo-types { display: flex; gap: 10px; flex-wrap: wrap; }
-.photo-pill {
-  font-family: var(--font-display);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 8px 16px;
-  background: transparent;
-  border: 1.5px solid rgba(14,21,13,0.3);
-  border-radius: 2px;
-  color: var(--bg-dark);
-  transition: all 0.2s;
-}
-.photo-pill:hover { background: var(--bg-dark); color: var(--lime); border-color: var(--bg-dark); }
-
 /* ============================================
    PORTFOLIO — mixed grid
    ============================================ */
@@ -731,7 +691,10 @@ textarea.form-input { height: 120px; resize: vertical; }
 }
 
 @media (max-width: 560px) {
-  .hero h1 { font-size: 40px; }
+  .hero h1 {
+  font-size: 36px;
+  letter-spacing: -0.02em;
+  }
   .portfolio-grid { grid-template-columns: 1fr; }
   .portfolio-grid .work-card:first-child { grid-column: span 1; }
   .about-grid { grid-template-columns: 1fr; }
